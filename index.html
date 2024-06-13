@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="calculadora">
+            <div :style="{fontSize: tamanhoLetra}" class="tela">
+                {{valorDisplay}}
+            </div>
+            <div class="configBotao">
+                <div class="linha">
+                    <button @click = "getNumero('7')">7</button>
+                    <button @click = "getNumero('8')">8</button>
+                    <button @click = "getNumero('9')">9</button>
+                    <button @click = "operacoes('/')">/</button>
+                </div>
+                <div class="linha">
+                    <button @click = "getNumero('4')">4</button>
+                    <button @click = "getNumero('5')">5</button>
+                    <button @click = "getNumero('6')">6</button>
+                    <button @click = "operacoes('*')">*</button>
+                </div>
+                <div class="linha">
+                    <button @click = "getNumero('1')">1</button>
+                    <button @click = "getNumero('2')">2</button>
+                    <button @click = "getNumero('3')">3</button>
+                    <button @click = "operacoes('-')">-</button>
+                </div>
+                <div class="linha">
+                    <button @click = "operacoes('=')">=</button>
+                    <button @click = "getNumero('0')">0</button>
+                    <button @click = "decimal">.</button>
+                    <button @click = "operacoes('+')">+</button>
+                </div>
+                    <div class="linha">
+                        <button @click = "apagar" class="apagar">Apagar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="process.js"></script>
+</body>
+</html>
